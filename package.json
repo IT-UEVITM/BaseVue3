@@ -1,5 +1,9 @@
 {
   "name": "vue3_base",
+  "engines": {
+    "node": "16.14.0",
+    "npm": "9.5.0"
+  },
   "version": "0.1.0",
   "private": true,
   "scripts": {

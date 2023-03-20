@@ -10,9 +10,7 @@
 export default {
   name: 'TestComponent',
   props: {
-    msg: {
-
-    }
+    msg: {}
   }
 }
 </script>
