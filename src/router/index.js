@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import ActividadesView from '../views/ActividadesView.vue'
+import ElementosView from '../views/ElementosView.vue'
 
 const routes = [
   {
@@ -8,15 +10,18 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/actividades',
+    name: 'actividades',
+    component: ActividadesView
+  },
+  {
+    path: '/elementos',
+    name: 'elementos',
+    component: ElementosView
   }
 ]
 
 const router = createRouter({
-  // eslint-disable-next-line no-undef
   history: createWebHistory(process.env.BASE_URL),
   routes
 })

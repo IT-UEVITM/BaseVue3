@@ -1,9 +1,17 @@
 <template>
   <div class="container">
-    <nav>
-      <router-link to="/"> Home </router-link>
-      <router-link to="/about"> About </router-link>
-    </nav>
+    <navBarComponent />
     <router-view />
   </div>
 </template>
+
+<script>
+import navBarComponent from '@/components/NavBarComponent.vue'
+
+export default {
+  name: 'HomeView',
+  components: {
+    navBarComponent
+  }
+}
+</script>
