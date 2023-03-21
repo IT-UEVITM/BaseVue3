@@ -8,4 +8,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import 'animate.css'
 
+import '@/assets/css/style.css'
+
 createApp(App).use(store).use(router).mount('#app')
