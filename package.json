@@ -10,9 +10,11 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "@vue/eslint-config-standard": "^8.0.1",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.2.3",
     "core-js": "^3.8.3",
@@ -29,13 +31,18 @@
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
-    "@vue/eslint-config-standard": "^6.1.0",
     "eslint": "^8.36.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-vue": "^9.9.0",
-    "husky": "^8.0.3",
+    "husky": "^8.0.0",
     "lint-staged": "^13.2.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "npm run lint",
+      "npm run format"
+    ]
   }
 }
