@@ -1,17 +1,20 @@
 <template>
   <div class="container">
-    <navBarComponent />
+    <!-- <navBarComponent /> -->
+    <navBarComponentCopy />
     <router-view />
   </div>
 </template>
 
 <script>
-import navBarComponent from '@/components/NavBarComponent.vue'
+// import navBarComponent from '@/components/NavBarComponent.vue'
+import navBarComponentCopy from '@/components/NavBarComponentCopy.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    navBarComponent
+    // navBarComponent
+    navBarComponentCopy
   }
 }
 </script>

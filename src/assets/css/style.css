@@ -1,229 +1,202 @@
-@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:800,900');
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable declaration-block-no-duplicate-properties */
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable keyframes-name-pattern */
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css');
+@import url('https://fonts.googleapis.com/css?family=Titan+One');
 
-html,
 body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.menu-container {
+  background-color: #ffc901;
+  border-radius: 100%;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: -120px;
+  top: -120px;
+  transition: all 0.3s;
+}
+
+.menu-container.full-menu {
+  border-radius: 0;
+  padding: 0 !important;
+  position: aboslute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: all 0.3s;
+}
+
+.full-menu .menu {
+  top: 40px;
+  left: 40px;
+}
+
+.menu {
+  color: white;
+  font-size: 3.5em;
+  position: absolute;
+  top: 160px;
+  left: 160px;
+  z-index: 100;
+  transition: all 0.3s;
+}
+
+.menu i {
+  opacity: 0.7;
+  transform: scale(1);
+  transition: all 0.3s;
+}
+
+.menu i:hover {
+  opacity: 1;
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.overlay.open {
+  opacity: 0.9;
+  visibility: visible;
   height: 100%;
 }
 
-body {
-  background: beige;
-  font-family: 'Alegreya Sans', sans-serif;
+.overlay.open li {
+  animation: fadeInRight 0.5s ease forwards;
+  animation-delay: 0.35s;
 }
 
-nav {
-  display: block;
-  position: fixed;
-  width: 500px;
-  height: 500px;
-  user-select: none;
-  transform: translate3d(25px, -25px, 0);
-  transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9);
+.overlay.open li:nth-of-type(2) {
+  animation-delay: 0.4s;
 }
 
-nav.open {
-  transform: translate3d(0, 0, 0);
+.overlay.open li:nth-of-type(3) {
+  animation-delay: 0.45s;
 }
 
-nav.top-right {
-  z-index: 99999;
-  top: -140px;
-  right: -140px;
+.overlay.open li:nth-of-type(4) {
+  animation-delay: 0.5s;
 }
 
-.disc {
-  position: absolute;
-  display: inline-block;
+.overlay nav {
+  font-size: 3.2em;
+  font-family: 'Titan One', san-serif;
+  position: relative;
+  height: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 400;
   text-align: center;
-  font: 25px 'Alegreya Sans', sans-serif;
-  line-height: 40px;
-  padding-top: 10px;
-  border-radius: 250px;
-  transform: scale3d(0.5, 0.5, 0.5) rotate3d(0, 0, 1, 190deg);
-  pointer-events: none;
-  opacity: 0;
-  cursor: pointer;
-  transition: transform 0.5s cubic-bezier(0.3, 1.4, 0.5, 0.9), opacity 0.5s;
 }
 
-.disc div {
-  transform: rotate(180deg);
-}
-
-.open .disc {
-  pointer-events: auto;
-  opacity: 1;
-}
-
-.l1 {
-  inset: 0;
-  background: #ff6347;
-  transition-delay: 0s;
-}
-
-.open .l1 {
-  transition-delay: 0s;
-  transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
-  opacity: 1;
-}
-
-.open .l1:hover {
-  /* stylelint-disable-next-line function-no-unknown */
-  background: shade(#ff6347, 90%);
-  color: #ff6347;
-  transition-delay: 0s;
-}
-
-.open .l1:active {
-  /* stylelint-disable-next-line function-no-unknown */
-  background: shade(#ff6347, 50%);
-  color: #ff6347;
-}
-
-.open .l1.toggle {
-  transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
-}
-
-.l2 {
-  inset: 50px;
-  background: #ff7a39;
-  transition-delay: 0.1s;
-}
-
-.open .l2 {
-  transition-delay: 0.1s;
-  transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
-  opacity: 1;
-}
-
-.open .l2:hover {
-  /* stylelint-disable-next-line function-no-unknown */
-  background: shade(#ff7a39, 90%);
-  color: #ff7a39;
-  transition-delay: 0s;
-}
-
-.open .l2:active {
-  /* stylelint-disable-next-line function-no-unknown */
-  background: shade(#ff7a39, 50%);
-  color: #ff7a39;
-}
-
-.open .l2.toggle {
-  transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
-}
-
-.l3 {
-  inset: 100px;
-  background: #ff912b;
-  transition-delay: 0.2s;
-}
-
-.open .l3 {
-  transition-delay: 0.2s;
-  transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
-  opacity: 1;
-}
-
-.open .l3:hover {
-  /* stylelint-disable-next-line function-no-unknown */
-  background: shade(#ff912b, 90%);
-  color: #ff912b;
-  transition-delay: 0s;
-}
-
-.open .l3:active {
-  /* stylelint-disable-next-line function-no-unknown */
-  background: shade(#ff912b, 50%);
-  color: #ff912b;
-}
-
-.open .l3.toggle {
-  transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
-}
-
-.l4 {
-  inset: 150px;
-  background: #ffa91c;
-  transition-delay: 0.3s;
-}
-
-.open .l4 {
-  transition-delay: 0.3s;
-  transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
-  opacity: 1;
-}
-
-.open .l4:hover {
-  /* stylelint-disable-next-line function-no-unknown */
-  background: shade(#ffa91c, 90%);
-  color: #ffa91c;
-  transition-delay: 0s;
-}
-
-.open .l4:active {
-  /* stylelint-disable-next-line function-no-unknown */
-  background: shade(#ffa91c, 50%);
-  color: #ffa91c;
-}
-
-.open .l4.toggle {
-  transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
-}
-
-.l5 {
-  inset: 200px;
-  background: #ffc00e;
-  transition-delay: 0.4s;
-}
-
-.open .l5 {
-  transition-delay: 0.4s;
-  transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 190deg);
-  opacity: 1;
-}
-
-.open .l5:hover {
-  /* stylelint-disable-next-line function-no-unknown */
-  background: shade(#ffc00e, 90%);
-  color: #ffc00e;
-  transition-delay: 0s;
-}
-
-.open .l5:active {
-  /* stylelint-disable-next-line function-no-unknown */
-  background: shade(#ffc00e, 50%);
-  color: #ffc00e;
-}
-
-.open .l5.toggle {
-  transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, 10deg);
-}
-
-.toggle {
-  line-height: 100px;
+.overlay ul {
+  list-style: none;
   padding: 0;
-  width: 100px;
-  background: gold;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+
+.overlay ul li {
+  display: block;
+  height: 25%;
+  height: calc(100% / 4);
+  min-height: 50px;
+  position: relative;
+  opacity: 0;
+}
+
+.overlay ul li a {
+  display: block;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  overflow: hidden;
+  opacity: 0.7;
+  transform: scale(1);
+  transition: all 0.3s;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus,
+.overlay ul li a:active {
   opacity: 1;
-  transform: none;
-  pointer-events: auto;
-  transition-delay: 0s;
+  transform: scale(1.2);
+  transition: all 0.3s;
 }
 
-.open .toggle {
-  transform: rotate3d(0, 0, 1, 0deg);
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0;
+  }
 }
 
-.toggle:hover {
-  /* stylelint-disable-next-line function-no-unknown */
-  background: shade(gold, 90%);
-  text-decoration: underline;
+.blob {
+  animation: blobby 4s infinite;
 }
 
-.toggle:active {
-  /* stylelint-disable-next-line function-no-unknown */
-  background: shade(gold, 50%);
-  color: rgb(255 215 0 / 50%);
-  transform: scale(0.9);
-  transition-duration: 0s;
+.blob2 {
+  animation: blobby2 6s infinite;
+}
+
+@keyframes blobby {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes blobby2 {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.18);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }

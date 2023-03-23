@@ -1,10 +1,15 @@
 <template>
-  <div>
+  <div class="container">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nostrum modi
+      eum suscipit aliquam perferendis obcaecati corporis et! Vitae ducimus iste
+      totam error enim repellendus reprehenderit nihil culpa autem placeat.
+    </p>
     <h1 class="text-center p-4">Esta es la página para los Elementos</h1>
-    <div class="container my-5 py-5">
+    <div class="my-5 py-5">
       <div class="row">
         <div class="col-12">
-          <div
+          <!-- <div
             id="carouselExampleIndicators"
             class="carousel slide"
             data-bs-ride="true"
@@ -52,7 +57,6 @@
                   class="d-block w-100"
                   alt="#"
                 />
-                <!-- <img src="https://dummyimage.com/1920x800/000/fff" class="d-block w-100" alt="#"> -->
               </div>
             </div>
             <button
@@ -79,9 +83,9 @@
               ></span>
               <span class="visually-hidden">Next</span>
             </button>
-          </div>
+          </div> -->
           <h1 class="mt-5">Colapsables</h1>
-          <div class="accordion" id="accordionExample">
+          <div class="accordion elementosBootstrap" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
                 <button
