@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import elementosComponent from '@/components/ElementosComponent.vue'
+import elementosComponent from '@/components/ElementosComponents/ElementosComponent.vue'
 
 export default {
   name: 'ElementosView',

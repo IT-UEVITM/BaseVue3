@@ -1,16 +1,13 @@
 <template>
-  <div>
+  <div class="p-4">
     <h1 class="text-center">
-      {{ msg }}
+      Esta es la página Actividad de falso y verdadero
     </h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'TestComponent',
-  props: {
-    msg: {}
-  }
+  name: 'FalsoVerdaderoComponent'
 }
 </script>

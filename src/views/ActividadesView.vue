@@ -1,16 +1,27 @@
 <template>
   <div>
-    <actividadesComponent />
+    <div v-if="!this.actividadId"><ActividadesHomeComponent /></div>
+    <div v-if="this.actividadId === 1"><FalsoVerdaderoComponent /></div>
+    <div v-if="this.actividadId === 2"><CuestionarioComponent /></div>
   </div>
 </template>
 
 <script>
-import actividadesComponent from '@/components/ActividadesComponent.vue'
+import {
+  ActividadesHomeComponent,
+  FalsoVerdaderoComponent,
+  CuestionarioComponent
+} from '@/components/ActividadesComponents'
 
 export default {
   name: 'ActividadesView',
+  data() {
+    return { actividadId: parseInt(this.$route.params.id) }
+  },
   components: {
-    actividadesComponent
+    ActividadesHomeComponent,
+    FalsoVerdaderoComponent,
+    CuestionarioComponent
   }
 }
 </script>
