@@ -25,6 +25,7 @@ nav.open {
 }
 
 nav.top-right {
+  z-index: 99999;
   top: -140px;
   right: -140px;
 }
