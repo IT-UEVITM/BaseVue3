@@ -11,6 +11,12 @@ const routes = [
     component: HomeView
   },
   {
+    path: '/actividades/:id?',
+    name: 'actividades',
+    component: ActividadesView,
+    props: true
+  },
+  {
     path: '/elementos',
     name: 'elementos',
     component: ElementosView
@@ -19,12 +25,6 @@ const routes = [
     path: '/OVAs',
     name: 'OVAs',
     component: OVAsView
-  },
-  {
-    path: '/actividades/:id?',
-    name: 'falsoVerdadero',
-    component: ActividadesView,
-    props: true
   }
 ]
 

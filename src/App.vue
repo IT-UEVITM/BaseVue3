@@ -1,20 +1,21 @@
 <template>
-  <div class="container">
-    <!-- <navBarComponent /> -->
-    <navBarComponentCopy />
-    <router-view />
+  <div>
+    <header class="app-header">
+      <navBarComponent></navBarComponent>
+    </header>
+    <main class="container py-4">
+      <router-view :key="$route.path"></router-view>
+    </main>
   </div>
 </template>
 
 <script>
-// import navBarComponent from '@/components/NavBarComponent.vue'
-import navBarComponentCopy from '@/components/MenuComponents/NavBarComponent.vue'
+import navBarComponent from '@/components/MenuComponents/NavBarComponent.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    // navBarComponent
-    navBarComponentCopy
+    navBarComponent
   }
 }
 </script>

@@ -6,5 +6,29 @@
       "customSyntax": "postcss-html"
     }
   ],
-  "rules": {}
+  "rules": {
+    "indentation": "tab",
+    "string-quotes": "double",
+    "no-duplicate-selectors": true,
+    "color-hex-case": "upper",
+    "color-named": "always-where-possible",
+    "selector-combinator-space-after": "always",
+    "selector-attribute-operator-space-before": "always",
+    "selector-attribute-operator-space-after": "always",
+    "declaration-block-trailing-semicolon": "always",
+    "declaration-colon-space-before": "never",
+    "declaration-colon-space-after": "always",
+    "number-leading-zero": "always",
+    "comment-empty-line-before": "always",
+    "rule-empty-line-before": "always-multi-line",
+    "selector-pseudo-element-colon-notation": "double",
+    "media-feature-parentheses-space-inside": "always",
+    "color-no-invalid-hex": true,
+    "value-keyword-case": [
+      "lower",
+      {
+        "ignoreFunctions": ["t", "var"]
+      }
+    ]
+  }
 }

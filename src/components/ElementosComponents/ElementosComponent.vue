@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nostrum modi
       eum suscipit aliquam perferendis obcaecati corporis et! Vitae ducimus iste

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="p-md-5 pt-5">
     <div v-if="!this.actividadId"><ActividadesHomeComponent /></div>
     <div v-if="this.actividadId === 1"><FalsoVerdaderoComponent /></div>
     <div v-if="this.actividadId === 2"><CuestionarioComponent /></div>

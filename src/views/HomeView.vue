@@ -1,14 +1,16 @@
 <template>
-  <div class="home">
-    <h1 class="text-center">Esta es la página principal</h1>
-    <h1 class="animate__animated animate__bounce text-center">
-      Elemento animado con animate.css
-    </h1>
+  <div class="p-5">
+    <homeComponent />
   </div>
 </template>
 
 <script>
+import homeComponent from '@/components/HomeComponents/HomeComponent.vue'
+
 export default {
-  name: 'HomeView'
+  name: 'ElementosView',
+  components: {
+    homeComponent
+  }
 }
 </script>

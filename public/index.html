@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
   </head>
   <body>
     <noscript>
@@ -16,6 +20,17 @@
       >
     </noscript>
     <div id="app"></div>
-    <!-- built files will be auto injected -->
+
+    <script>
+      if (window.performance) {
+        console.info('window.performance works fine on this browser')
+      }
+      if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+        location.replace('/')
+      }
+      // else {
+      //   console.info( "This page is not reloaded");
+      // }
+    </script>
   </body>
 </html>

@@ -1,5 +1,6 @@
 <template>
-  <div class="p-4">
+  <div>
+    <button @click="volver()">Volver</button>
     <h1 class="text-center">
       Esta es la página Actividad de falso y verdadero
     </h1>
@@ -8,6 +9,11 @@
 
 <script>
 export default {
-  name: 'FalsoVerdaderoComponent'
+  name: 'FalsoVerdaderoComponent',
+  methods: {
+    volver() {
+      window.history.back()
+    }
+  }
 }
 </script>

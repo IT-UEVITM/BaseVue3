@@ -1,11 +1,16 @@
 <template>
-  <div class="home">
-    <h1 class="text-center">Esta es la página de OVAs</h1>
+  <div class="p-md-5 pt-5">
+    <OVAsComponent />
   </div>
 </template>
 
 <script>
+import OVAsComponent from '@/components/OVAsComponents/OVAComponent.vue'
+
 export default {
-  name: 'OVAsView'
+  name: 'ElementosView',
+  components: {
+    OVAsComponent
+  }
 }
 </script>

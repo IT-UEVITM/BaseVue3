@@ -1,47 +1,75 @@
 <template>
-  <div class="menu-container" id="toggle">
-    <a href="#" class="menu icon"
-      ><i class="fa fa-bars" aria-hidden="true"></i
-    ></a>
-  </div>
-  <div class="overlay" id="overlay">
-    <nav class="overlay-menu">
-      <ul>
-        <li><a href="/actividades">Actividades</a></li>
-        <li><a href="/elementos">Elementos</a></li>
-        <li><a href="/OVAs">OVA</a></li>
-      </ul>
-    </nav>
-  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Logo ITM</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        id="btnCloseNavBar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li
+            class="nav-item navBarItem"
+            id="menuLink-1"
+            @click="activeNavbarItem(1)"
+          >
+            <router-link to="/" class="nav-item nav-link" exact>
+              <i class="fas navBarItemIco fa-tachometer-alt"> </i> Inicio
+            </router-link>
+          </li>
+          <li
+            class="nav-item navBarItem"
+            id="menuLink-2"
+            @click="activeNavbarItem(2)"
+          >
+            <router-link to="/actividades" class="nav-item nav-link" exact>
+              <i class="fas navBarItemIco fa-pencil-alt"></i> Actividades
+            </router-link>
+          </li>
+          <li
+            class="nav-item navBarItem"
+            id="menuLink-3"
+            @click="activeNavbarItem(3)"
+          >
+            <router-link to="/elementos" class="nav-item nav-link" exact>
+              <i class="fas navBarItemIco fa-box"></i> Elementos
+            </router-link>
+          </li>
+          <li
+            class="nav-item navBarItem"
+            id="menuLink-4"
+            @click="activeNavbarItem(4)"
+          >
+            <router-link to="/OVAs" class="nav-item nav-link" exact>
+              <i class="fas fa-book-open"></i> OVAs
+            </router-link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </template>
 
 <script>
+// import $ from 'jquery'
+import { activeNavbarItem } from '../../assets/js/scripts'
+
 export default {
   name: 'NavBarComponent',
-  data() {
-    return {
-      iconoMenu: null
-    }
-  },
   props: {
     msg: {}
   },
-  mounted() {
-    const menu = document.querySelector('#toggle')
-    const menuItems = document.querySelector('#overlay')
-    const menuContainer = document.querySelector('.menu-container')
-    const menuIcon = document.querySelector('i')
-
-    function toggleMenu(e) {
-      menuItems.classList.toggle('open')
-      menuContainer.classList.toggle('full-menu')
-      menuIcon.classList.toggle('fa-bars')
-      menuIcon.classList.add('fa-times')
-      e.preventDefault()
-    }
-
-    menu.addEventListener('click', toggleMenu, false)
+  methods: {
+    activeNavbarItem
   },
-  methods: {}
+  mounted() {}
 }
 </script>
