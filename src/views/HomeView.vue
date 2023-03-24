@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="p-4">
     <h1 class="text-center">Esta es la página principal</h1>
     <h1 class="animate__animated animate__bounce text-center">
       Elemento animado con animate.css
