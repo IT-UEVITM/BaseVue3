@@ -1,5 +1,5 @@
 <template>
-  <div class="p-5">
+  <div class="p-md-5 pt-5">
     <homeComponent />
   </div>
 </template>
